@@ -24,5 +24,5 @@ public class PessoaRelacionamento {
     private Integer idade;
 
     @Relationship(type = "AMIGO_DE", direction = Relationship.Direction.OUTGOING)
-    private Set<PessoaRelacionamento> amigos;
+    private Set<Amizade> amigos;
 }

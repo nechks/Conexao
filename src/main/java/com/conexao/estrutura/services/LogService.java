@@ -14,7 +14,7 @@ public class LogService {
     private final PessoaLogRepository pessoaLogRepository;
 
     public void salvarLog(String mensagem, String nivel) {
-        PessoaLog log = new PessoaLog("",mensagem, nivel);
+        PessoaLog log = new PessoaLog(null, mensagem, nivel);
         pessoaLogRepository.save(log);
 
      System.out.println("Salvamento no mongo OSSECUS" + log);   

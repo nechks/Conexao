@@ -1,5 +1,8 @@
 package com.conexao.estrutura.model;
 
+import org.springframework.data.neo4j.core.schema.Node;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +18,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 @Table(name = "registro")
+@Node("PessoaModel")
 public class PessoaModel {
 
     @Id
@@ -23,6 +27,7 @@ public class PessoaModel {
     private Long id;
     private String name;
     private String email;
+    @Column(unique = true)
     private String cpf;
     private String dataNascimento;
 

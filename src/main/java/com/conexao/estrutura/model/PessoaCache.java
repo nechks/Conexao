@@ -13,7 +13,7 @@ import lombok.*;
 public class PessoaCache {
 
     @Id
-    private String id;  // Pode ser o mesmo id do banco PostgreSQL
+    private String id;  
 
     private String name;
     private String email;

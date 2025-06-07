@@ -12,7 +12,7 @@ import lombok.*;
 public class PessoaLog {
  
  @Id
- private String id;
+ private Long id;
  
  private String mensagem;
  private String nivel;
