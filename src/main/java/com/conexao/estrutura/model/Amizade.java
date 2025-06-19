@@ -15,9 +15,7 @@ public class Amizade {
 
     @RelationshipId
     private Long id;
-
     private String desde; // exemplo: data do início da amizade
-
     @TargetNode
     private PessoaRelacionamento amigo;
 }

@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EnableJpaRepositories(
-    basePackages = "com.conexao.estrutura.repository.postgres"
+    basePackages = "com.conexao.estrutura.repository.postgres",
+    repositoryImplementationPostfix = "Jpa" // Adiciona sufixo
 )
 public class JpaConfig {}

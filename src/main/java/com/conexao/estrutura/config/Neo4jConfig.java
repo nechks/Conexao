@@ -8,7 +8,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager;
 
 @Configuration
-@EnableNeo4jRepositories(basePackages = "com.conexao.estrutura.repository")
+@EnableNeo4jRepositories(basePackages = "com.conexao.estrutura.repository.neo4j",
+repositoryImplementationPostfix = "Neo4j") // Adiciona sufixo)
 public class Neo4jConfig {
 
     @Bean

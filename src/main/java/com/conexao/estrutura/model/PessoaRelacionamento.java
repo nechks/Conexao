@@ -6,9 +6,10 @@ import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
+import java.util.HashSet;
 import java.util.Set;
 
-@Node("PessoaModel")
+@Node("Pessoa")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,8 +22,11 @@ public class PessoaRelacionamento {
     private Long id;
 
     private String nome;
-    private Integer idade;
-
+    private String dataNascimento;
+    
     @Relationship(type = "AMIGO_DE", direction = Relationship.Direction.OUTGOING)
-    private Set<Amizade> amigos;
+    @Builder.Default
+    private Set<Amizade> amigos = new HashSet<>();
+
+
 }
